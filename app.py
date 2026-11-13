@@ -1,5 +1,6 @@
 
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import pandas as pd
 import joblib
@@ -8,7 +9,20 @@ from features import convert_features
 
 app = FastAPI(title="Car Price Prediction API")
 
+# Allow React frontend to access FastAPI
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://127.0.0.1:5173",
+    ],
+    allow_credentials=False,
+    allow_methods=["GET", "POST", "OPTIONS"],
+    allow_headers=["Content-Type"],
+)
+
 model = joblib.load("car_price_model.pkl")
+
 
 class CarInput(BaseModel):
     name: str
@@ -24,9 +38,11 @@ class CarInput(BaseModel):
     torque: str
     seats: float
 
+
 @app.get("/")
 def home():
     return {"message": "Car Price Prediction API is running"}
+
 
 @app.post("/predict")
 def predict(car: CarInput):
