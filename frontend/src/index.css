@@ -1,0 +1,176 @@
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.field select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 16px;
+  color: #f8faff;
+  background: #0c1429;
+  border: 1px solid #364463;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.field select:hover {
+  border-color: #8b79ff;
+  background: #121d38;
+}
+
+.field select:focus {
+  outline: none;
+  border-color: #8b79ff;
+  box-shadow: 0 0 0 3px #8b79ff30;
+}
+
+.field select option {
+  background: #111a31;
+  color: white;
+}
+
+.field select {
+  width: 100%;
+  min-height: 44px;
+  padding: 0 16px;
+  color: #f8faff;
+  background: #0c1429;
+  border: 1px solid #364463;
+  border-radius: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.field select:hover {
+  border-color: #8b79ff;
+  background: #121d38;
+}
+
+.field select:focus {
+  outline: none;
+  border-color: #8b79ff;
+  box-shadow: 0 0 0 3px #8b79ff30;
+}
+
+.field select option {
+  background: #111a31;
+  color: white;
+}
+
+/* AutoValue AI — Premium Select */
+
+.car-select__control {
+  min-height: 46px;
+  padding: 0 14px;
+  background: #0c1429;
+  border: 1px solid #344263;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.car-select__control:hover {
+  border-color: #8875ff;
+  background: #121b36;
+}
+
+.car-select__control--is-focused {
+  border-color: #8875ff;
+  box-shadow: 0 0 0 3px #8875ff25;
+}
+
+.car-select__value-container {
+  padding: 0;
+}
+
+.car-select__single-value,
+.car-select__input-container {
+  color: #f6f8ff;
+  font-size: 14px;
+}
+
+.car-select__placeholder {
+  color: #7890b7;
+  font-size: 13px;
+}
+
+.car-select__dropdown-indicator {
+  color: #9caef5;
+}
+
+.car-select__indicator-separator {
+  display: none;
+}
+
+.car-select__menu {
+  z-index: 100;
+  margin-top: 7px;
+  overflow: hidden;
+  background: #121c36;
+  border: 1px solid #414a80;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px #0008;
+}
+
+.car-select__menu-list {
+  padding: 7px;
+  max-height: 210px;
+}
+
+.car-select__option {
+  padding: 11px 13px;
+  margin: 2px 0;
+  color: #c9d6f7;
+  font-size: 13px;
+  border-radius: 9px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.car-select__option--is-focused {
+  background: #283766;
+  color: white;
+}
+
+.car-select__option--is-selected {
+  background: linear-gradient(
+    90deg,
+    #6958e8,
+    #367de9
+  );
+  color: white;
+}
+
+.car-select__menu-notice {
+  padding: 14px;
+  color: #9aaad0;
+}
+
+.form-card {
+  overflow: visible;
+}
+
+.field {
+  min-width: 0;
+}

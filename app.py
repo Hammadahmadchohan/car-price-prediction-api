@@ -51,7 +51,15 @@ def predict(car: CarInput):
 
     prediction = model.predict(data)[0]
 
+    
+    # INR to PKR conversion
+    INR_TO_PKR = 2.94  # Approximate rate, 13 Nov 2026
+
+    price_inr = float(prediction)
+    price_pkr = round(price_inr * INR_TO_PKR, 2)
+
     return {
-        "predicted_price": round(float(prediction), 2),
-        "currency": "INR"
+        "predicted_price": price_pkr,
+        "currency": "PKR"
     }
+
